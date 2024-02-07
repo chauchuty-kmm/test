@@ -15,7 +15,8 @@ jobs:
 
     - name: Validate Branch Name
       run: |
-        if [[ "${GITHUB_REF#refs/heads/}" =~ ^feature/ ]]; then
+        branch_name="${GITHUB_REF#refs/heads/}"
+        if [[ "$branch_name" =~ ^feature/ ]]; then
           echo "Branch name is valid."
         else
           echo "Error: Invalid branch name. Feature branches must start with 'feature/'."
