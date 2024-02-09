@@ -8,7 +8,7 @@
       fetch('https://economia.awesomeapi.com.br/last/USD-BRL')
         .then(res => res.json())
         .then(data => {
-            document.querySelector('pre').innerHTML = data;
+            document.querySelector('pre').innerHTML = JSON.stringify(data);
         })
     </script>
   </body>
