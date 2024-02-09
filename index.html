@@ -1,5 +1,15 @@
 <html>
   <body>
       <h1>Hello wOrld</h1>
+      <pre>
+        
+      </pre>
+    <script>
+      fetch('https://economia.awesomeapi.com.br/last/USD-BRL')
+        .then(res => res.json())
+        .then(data => {
+            document.querySelector('pre').innerHTML = data;
+        }
+    </script>
   </body>
 </html>
